@@ -112,8 +112,8 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
         float moveDistance = moveSpeed * Time.deltaTime;
-        float playerRadius = .7f;
-        float playerHeight = 2f;
+        float playerRadius = .4f;
+        float playerHeight = 1f;
         bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
 
         if (!canMove)
